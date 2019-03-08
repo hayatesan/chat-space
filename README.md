@@ -13,6 +13,25 @@ Things you may want to cover:
 
 * Database creation
 
+users
+  name: :string
+  email: :text
+  groups_id: :integer
+  password: :text
+
+groups
+  name: :text
+
+user_goup
+  user_id: :integer
+  group_id: :integer
+
+messages
+  text: :text
+  image: :text
+  user_id: :integer
+
+
 * Database initialization
 
 * How to run the test suite
