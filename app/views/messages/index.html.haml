@@ -1,67 +1,61 @@
-!!!
-%html
-  %head
-    %meta{:content => "text/html; charset=UTF-8", "http-equiv" => "Content-Type"}/
-    %title ChatSpaceSample
-    %meta{:content => "authenticity_token", :name => "csrf-param"}/
-    %meta{:content => "iOrHzuYMiMWREQCvS2QPXMd7x5/S2AH0I3I0v+qY9qfi99fqia/+8orOUK+0fGquObBzjN3daPSG2Uj4YcNsGQ==", :name => "csrf-token"}/
-    %link{"data-turbolinks-track" => "reload", :href => "/assets/application-20597f7122b97f433c4487edf7d6a0cfc9e951e2a661b8b0c7320b95bbd38ccd.css", :media => "all", :rel => "stylesheet"}/
-    %script{"data-turbolinks-track" => "reload", :src => "/assets/application-6b92f7bcf94deede5afc9ab209237e3423679aa989ffa2c7a102c62118315e23.js"}
-  %body
-    .flash-box
-    .wrapper
-      .chat-side
-        .side-header
-          .side-header__box
-            %p.side-header__box__user-name ppp
-            %ul.side-header__box__menu
-              %li.side-header__box__menu__edit-user
-                %a{:href => "/groups/new"}
-                  %i.fa.fa-edit
-              %li.side-header__box__menu__new-group
-                %a{:href => "/users/317/edit"}
-                  %i.fa.fa-cog
-        .groups
-          %a{:href => "/groups/644/messages"}
-            .group
-              %p.group__group-name tech::camp
-              %p.group__latest-message 楽しいいい
-      .chat-main
-        .main-header
-          .main-header__left-box
-            %h2.main-header__left-box__current-group{"data-group_id" => "561"}
-              tech::camp
-            %ul.main-header__left-box__member-list
-              Member：
-              %li.main-header__left-box__member-list__member aaaa
-              %li.main-header__left-box__member-list__member aaa
-              %li.main-header__left-box__member-list__member aaa
-              %li.main-header__left-box__member-list__member hayate
-          %a{:href => "/groups/561/edit"}
-            .main-header__edit-btn Edit
-        .messages
-          .message{"data-message_id" => "1255"}
-            .message__upper-info
-              %p.message__upper-info__talker hayate
-              %p.message__upper-info__date 2019/03/04(Mon) 15:35:27
-            %p.message__text aaaa
-          .message{"data-message_id" => "1256"}
-            .message__upper-info
-              %p.message__upper-info__talker hayate
-              %p.message__upper-info__date 2019/03/04(Mon) 15:35:32
-            %p.message__text aiueo
-          .message{"data-message_id" => "1853"}
-            .message__upper-info
-              %p.message__upper-info__talker ppp
-              %p.message__upper-info__date 2019/03/16(Sat) 16:16:40
-            %p.message__text ああああああ
-        .form
-          %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/561/messages", :enctype => "multipart/form-data", :method => "post"}
-            %input{:name => "utf8", :type => "hidden", :value => "✓"}/
-            %input{:name => "authenticity_token", :type => "hidden", :value => "wXPjuux7UvcI2/UWM9PSnPXmbm80jwPrzrtDtfdDGT9d0DvaxRBjjTXu1t/q5ilPGnNVneOkLokGCd62l2Lrsw=="}/
-            .input-box
-              %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
-              %label.input-box__image{:for => "message_image"}
-                %i.fa.fa-image
-                %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
-            %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
+
+.flash-box
+.wrapper
+  .chat-side
+    .side-header
+      .side-header__box
+        %p.side-header__box__user-name ppp
+        %ul.side-header__box__menu
+          %li.side-header__box__menu__edit-user
+            %a{:href => "/groups/new"}
+              %i.fa.fa-edit
+          %li.side-header__box__menu__new-group
+            %a{:href => "/users/317/edit"}
+              %i.fa.fa-cog
+    .groups
+      %a
+        .group
+          %p.group__group-name firstchat
+          %p.group__latest-message まだメッセージがありません
+      %a
+        .group
+          %p.group__group-name tech::camp
+          %p.group__latest-message 楽しいいい
+  .chat-main
+    .main-header
+      .main-header__left-box
+        %h2.main-header__left-box__current-group{"data-group_id" => "644"}
+          tech::camp
+        %ul.main-header__left-box__member-list
+          Member：
+          %li.main-header__left-box__member-list__member aaa
+          %li.main-header__left-box__member-list__member bbb
+          %li.main-header__left-box__member-list__member ccc
+      %a
+        .main-header__edit-btn Edit
+    .messages
+      .message{"data-message_id" => "1460"}
+        .message__upper-info
+          %p.message__upper-info__talker aaa
+          %p.message__upper-info__date 2019/03/08(Fri) 17:15:10
+        %p.message__text 楽しいいい
+      .message{"data-message_id" => "1980"}
+        .message__upper-info
+          %p.message__upper-info__talker bbb
+          %p.message__upper-info__date 2019/03/18(Mon) 21:19:45
+        %p.message__text bbbです
+      .message{"data-message_id" => "1981"}
+        .message__upper-info
+          %p.message__upper-info__talker ccc
+          %p.message__upper-info__date 2019/03/18(Mon) 21:19:49
+        %p.message__text cccです
+    .form
+      %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/644/messages", :enctype => "multipart/form-data", :method => "post"}
+        %input{:name => "utf8", :type => "hidden", :value => "✓"}/
+        %input{:name => "authenticity_token", :type => "hidden", :value => "s21nfwcYP9O9SgPJxu4MKK7v9d3x1w0mlyYBpHnBg99/yjpOT08cjLoDXM5QYv10/DIBSJh/sfpe6QfY/29T1Q=="}/
+        .input-box
+          %input#message_content.input-box__text{:name => "message[content]", :placeholder => "type a message", :type => "text"}/
+          %label.input-box__image{:for => "message_image"}
+            %i.fa.fa-image
+            %input#message_image.input-box__image__file{:name => "message[image]", :type => "file"}/
+        %input.submit-btn{"data-disable-with" => "Send", :name => "commit", :type => "submit", :value => "Send"}/
