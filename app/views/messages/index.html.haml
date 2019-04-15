@@ -4,15 +4,56 @@
   .chat-side
     .side-header
       .side-header__box
-        %p.side-header__box__user-name ppp
+        %p.side-header__box__user-name
+          = current_user.name
         %ul.side-header__box__menu
           %li.side-header__box__menu__edit-user
-            %a{:href => "/groups/new"}
-              %i.fa.fa-edit
+            = link_to do
+              = fa_icon 'pencil-square-o', class: 'icon'
           %li.side-header__box__menu__new-group
-            %a{:href => "/users/317/edit"}
-              %i.fa.fa-cog
+            = link_to edit_user_path(current_user) do
+              = fa_icon 'cog', class: 'icon'
     .groups
+      %a
+        .group
+          %p.group__group-name firstchat
+          %p.group__latest-message まだメッセージがありません
+      %a
+        .group
+          %p.group__group-name tech::camp
+          %p.group__latest-message 楽しいいい
+      %a
+        .group
+          %p.group__group-name firstchat
+          %p.group__latest-message まだメッセージがありません
+      %a
+        .group
+          %p.group__group-name tech::camp
+          %p.group__latest-message 楽しいいい
+      %a
+        .group
+          %p.group__group-name firstchat
+          %p.group__latest-message まだメッセージがありません
+      %a
+        .group
+          %p.group__group-name tech::camp
+          %p.group__latest-message 楽しいいい
+      %a
+        .group
+          %p.group__group-name firstchat
+          %p.group__latest-message まだメッセージがありません
+      %a
+        .group
+          %p.group__group-name tech::camp
+          %p.group__latest-message 楽しいいい
+      %a
+        .group
+          %p.group__group-name firstchat
+          %p.group__latest-message まだメッセージがありません
+      %a
+        .group
+          %p.group__group-name tech::camp
+          %p.group__latest-message 楽しいいい
       %a
         .group
           %p.group__group-name firstchat
@@ -49,6 +90,32 @@
           %p.message__upper-info__talker ccc
           %p.message__upper-info__date 2019/03/18(Mon) 21:19:49
         %p.message__text cccです
+      .message{"data-message_id" => "1981"}
+        .message__upper-info
+          %p.message__upper-info__talker ccc
+          %p.message__upper-info__date 2019/03/18(Mon) 21:19:49
+        %p.message__text cccです
+      .message{"data-message_id" => "1981"}
+        .message__upper-info
+          %p.message__upper-info__talker ccc
+          %p.message__upper-info__date 2019/03/18(Mon) 21:19:49
+        %p.message__text cccです
+      .message{"data-message_id" => "1981"}
+        .message__upper-info
+          %p.message__upper-info__talker ccc
+          %p.message__upper-info__date 2019/03/18(Mon) 21:19:49
+        %p.message__text cccです
+      .message{"data-message_id" => "1981"}
+        .message__upper-info
+          %p.message__upper-info__talker ccc
+          %p.message__upper-info__date 2019/03/18(Mon) 21:19:49
+        %p.message__text cccです
+      .message{"data-message_id" => "1981"}
+        .message__upper-info
+          %p.message__upper-info__talker ccc
+          %p.message__upper-info__date 2019/03/18(Mon) 21:19:49
+        %p.message__text cccです
+
     .form
       %form#new_message.new_message{"accept-charset" => "UTF-8", :action => "/groups/644/messages", :enctype => "multipart/form-data", :method => "post"}
         %input{:name => "utf8", :type => "hidden", :value => "✓"}/
